@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>In Between</title>
+    <title>December Holiday</title>
     <style>
       html,
       body {
@@ -26,44 +26,42 @@
         max-height: 60vh;
         margin-bottom: 2rem;
       }
-
-      #message {
-        margin-bottom: 1.5rem;
-      }
-
-      .quote {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      audio {
-        display: none;
-      }
     </style>
   </head>
   <body>
-    <img src="/delta-warriors-wiki/_assets/img/tree.webp" alt="Not a page" />
-    <div id="message">Well, there is not a page here.</div>
-    <a href="/" id="go-back">Go back</a>
+    <img
+      src="/delta-warriors-wiki/_assets/img/holiday.webp"
+      alt="(It's her guitar.)"
+    />
+    <div style="margin-bottom: 10px">
+      (There's a dark triangle on the ground.)
+    </div>
+
+    <div style="margin-top: 10px">
+      <a
+        href="/delta-warriors-wiki/your_hand.html"
+        id="go-back"
+        style="margin-right: 10px"
+        >Take it</a
+      >
+      <a href="/" id="go-back">Go back</a>
+    </div>
 
     <audio autoplay loop>
       <source
-        src="/delta-warriors-wiki/_assets/mus/birds.ogg"
+        src="/delta-warriors-wiki/_assets/mus/findher.ogg"
         type="audio/ogg"
       />
       <source
-        src="/delta-warriors-wiki/_assets/mus/birds.mp3"
+        src="/delta-warriors-wiki/_assets/mus/findher.mp3"
         type="audio/mp3"
       />
-      Well, there is not an audio here.
     </audio>
 
     <script>
-      setTimeout(function () {
-        document.getElementById("message").innerText =
-          "Don't you have anything better to do?";
-        document.getElementById("go-back").innerText = "...";
-      }, 60000);
+      if (document.cookie.includes("saw1225=true")) {
+        window.location.href = "/404.html";
+      }
     </script>
   </body>
 </html>

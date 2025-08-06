@@ -29,21 +29,118 @@
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
       }
+
+      .line {
+        opacity: 0;
+        margin: 0.2rem 0;
+      }
+
+      .line.visible {
+        opacity: 1;
+      }
+
+      #final-hand {
+        margin-top: 50px;
+        display: none;
+      }
+
+      #start-prompt {
+        font-size: 2rem;
+        animation: pulse 2s ease-in-out infinite;
+        cursor: pointer;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .hidden {
+        display: none;
+      }
     </style>
   </head>
   <body>
-    <div>You tried to take it...</div>
-    <div>But, it slipped through your hand.</div>
-    <div>And you couldn't find it anymore.</div>
-    <div>You couldn't find</div>
-    <div style="margin-top: 50px">your hand.</div>
+    <div id="start-prompt">...</div>
+    <div class="line hidden" id="line1">You tried to take it...</div>
+    <div class="line hidden" id="line2">But, it slipped through your hand.</div>
+    <div class="line hidden" id="line3">And you couldn't find it anymore.</div>
+    <div class="line hidden" id="line4">You couldn't find</div>
+    <div id="final-hand" class="hidden" style="margin-top: 50px">
+      your hand.
+    </div>
   </body>
 
   <script>
     if (document.cookie.includes("saw1225=true")) {
       window.location.href = "/404.html";
-    } else {
-      document.cookie = "saw1225=true; max-age=31536000";
     }
+
+    document.getElementById("start-prompt").addEventListener("click", () => {
+      document.getElementById("start-prompt").style.display = "none";
+      startTypewriter();
+    });
+
+    function startTypewriter() {
+      const lines = [
+        { id: "line1", text: "You tried to take it...", delay: 0 },
+        {
+          id: "line2",
+          text: "But, it slipped through your hand.",
+          delay: 2500,
+        },
+        { id: "line3", text: "And you couldn't find it anymore.", delay: 5000 },
+        { id: "line4", text: "You couldn't find", delay: 8000 },
+      ];
+
+      lines.forEach((line, index) => {
+        setTimeout(() => {
+          typewriteLine(line.id, line.text, index === lines.length - 1);
+        }, line.delay);
+      });
+    }
+
+    function typewriteLine(elementId, text, isLast) {
+      const element = document.getElementById(elementId);
+      element.classList.remove("hidden");
+      element.classList.add("visible");
+      element.innerHTML = "";
+
+      let i = 0;
+      const typeInterval = setInterval(() => {
+        if (i < text.length) {
+          element.innerHTML = text.substring(0, i + 1);
+          i++;
+        } else {
+          clearInterval(typeInterval);
+
+          if (isLast) {
+            setTimeout(showFinalHand, 1500);
+          }
+        }
+      }, 50);
+    }
+
+    function showFinalHand() {
+      document.querySelectorAll(".line").forEach((line) => {
+        line.style.color = "transparent";
+      });
+
+      const finalHand = document.getElementById("final-hand");
+      finalHand.classList.remove("hidden");
+      finalHand.style.display = "block";
+
+      setTimeout(() => {
+        document.cookie = "saw1225=true; max-age=31536000";
+        window.location.href = "/delta-warriors-wiki/404.html";
+      }, 3000);
+    }
+
+    // No additional styles needed since cursor functionality was removed
   </script>
 </html>

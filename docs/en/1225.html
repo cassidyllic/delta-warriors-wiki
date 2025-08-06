@@ -25,42 +25,125 @@
         max-width: 80vw;
         max-height: 60vh;
         margin-bottom: 2rem;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+      }
+
+      img:hover {
+        opacity: 0.8;
+      }
+
+      img.started:hover {
+        opacity: 1;
+      }
+
+      img.started {
+        cursor: default;
+      }
+
+      #message {
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      #message.visible {
+        opacity: 1;
+      }
+
+      #options {
+        margin-top: 1rem;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      #options.visible {
+        opacity: 1;
+      }
+
+      #options a {
+        color: white;
+        text-decoration: underline;
+        margin: 0 5px;
+      }
+
+      .click-hint {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #666;
+        font-size: 0.9rem;
+        animation: pulse 2s infinite;
+        pointer-events: none;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 0.8;
+        }
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      audio {
+        display: none;
       }
     </style>
   </head>
   <body>
     <img
+      id="holidayImage"
       src="/delta-warriors-wiki/_assets/img/holiday.webp"
       alt="(It's her guitar.)"
     />
-    <div style="margin-bottom: 10px">
-      (There's a dark triangle on the ground.)
+    <div id="message">(You notice a dark triangle on the ground.)</div>
+    <div id="options">
+      <a href="/delta-warriors-wiki/your_hand.html">Take it</a>
+      <a href="/">Go back</a>
     </div>
-
-    <div style="margin-top: 10px">
-      <a
-        href="/delta-warriors-wiki/your_hand.html"
-        id="go-back"
-        style="margin-right: 10px"
-        >Take it</a
-      >
-      <a href="/" id="go-back">Go back</a>
-    </div>
-
-    <audio autoplay loop>
-      <source
-        src="/delta-warriors-wiki/_assets/mus/findher.ogg"
-        type="audio/ogg"
-      />
-      <source
-        src="/delta-warriors-wiki/_assets/mus/findher.mp3"
-        type="audio/mp3"
-      />
-    </audio>
+    <div id="clickHint" class="click-hint">Find her.</div>
 
     <script>
       if (document.cookie.includes("saw1225=true")) {
         window.location.href = "/404.html";
+      }
+
+      let hasStarted = false;
+      let audio = null;
+
+      document
+        .getElementById("holidayImage")
+        .addEventListener("click", function () {
+          if (!hasStarted) {
+            startExperience();
+          }
+        });
+
+      function startExperience() {
+        hasStarted = true;
+
+        document.getElementById("clickHint").classList.add("hidden");
+        document.getElementById("holidayImage").classList.add("started");
+
+        audio = new Audio("/delta-warriors-wiki/_assets/mus/findher.mp3");
+        audio.loop = true;
+        audio.volume = 0.3;
+
+        audio.play().catch((e) => {
+          console.warn("Audio playback failed:", e);
+        });
+
+        setTimeout(function () {
+          document.getElementById("message").classList.add("visible");
+          document.getElementById("options").classList.add("visible");
+        }, 66000);
       }
     </script>
   </body>

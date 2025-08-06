@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>In Between</title>
+    <title>The Forgotten Man</title>
     <style>
       html,
       body {
@@ -42,28 +42,26 @@
     </style>
   </head>
   <body>
-    <img src="/delta-warriors-wiki/_assets/img/tree.webp" alt="Not a page" />
-    <div id="message">Well, there is not a page here.</div>
-    <a href="/" id="go-back">Go back</a>
+    <img
+      src="/delta-warriors-wiki/_assets/img/tree.webp"
+      alt="(Behind the tree.)"
+    />
+    <div id="message">(He is behind the tree.)</div>
 
     <audio autoplay loop>
-      <source
-        src="/delta-warriors-wiki/_assets/mus/birds.ogg"
-        type="audio/ogg"
-      />
-      <source
-        src="/delta-warriors-wiki/_assets/mus/birds.mp3"
-        type="audio/mp3"
-      />
-      Well, there is not an audio here.
+      <source src="/delta-warriors-wiki/_assets/mus/man.ogg" type="audio/ogg" />
+      <source src="/delta-warriors-wiki/_assets/mus/man.mp3" type="audio/mp3" />
+      Well, there is not a music here.
     </audio>
 
     <script>
       setTimeout(function () {
-        document.getElementById("message").innerText =
-          "Don't you have anything better to do?";
-        document.getElementById("go-back").innerText = "...";
-      }, 60000);
+        document.getElementById("message").innerText = "You yearn for freedom.";
+        document.querySelector("audio").pause();
+        document.querySelector("img").src =
+          "/delta-warriors-wiki/_assets/img/freedom.png";
+        document.querySelector("img").alt = "(Get rid of your strings.)";
+      }, 300000);
     </script>
   </body>
 </html>
