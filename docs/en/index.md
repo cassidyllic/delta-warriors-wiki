@@ -6,8 +6,6 @@ icon: material/home
 
 ## Introduction
 
-debug_string_03
-
 Delta Warriors is a 3D fighter with Open-World and Gacha elements based on Deltarune. It was developed by Idyll Works and is hosted on [:simple-roblox: Roblox](https://example.com). <!-- To be replaced, the Roblox page is not out yet. -->
 
 ## Getting Started
@@ -32,4 +30,5 @@ Join our community to stay updated and connect with other players:
 
 ---
 
-_This wiki is open-source. Found an error? Let us know on Discord!_
+_This wiki is open-source. Found an error? Let us know on Discord!_  
+_debugString04_
