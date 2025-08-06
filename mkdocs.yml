@@ -16,7 +16,7 @@ extra:
     - icon: simple/robloxstudio
       link: https://www.roblox.com/communities/7344131/Idyll-Works#!/about
       name: Official Roblox community
-    - icon: bootstrap/deltarune
+    - icon: custom/deltarune
       link: https://deltarune.com/
       name: Deltarune by Toby Fox
 
@@ -59,7 +59,7 @@ plugins:
           build: true
         - locale: fr
           name: Français
-          build: true
+          build: false
           nav_translations:
             Home: Accueil
             Mechanics: Mécaniques
@@ -71,10 +71,10 @@ plugins:
             NPCs: PNJs
         - locale: ja
           name: 日本語
-          build: true
+          build: false
         - locale: pt-BR
           name: Português Brasileiro
-          build: true
+          build: false
   - macros
   - meta
   - search

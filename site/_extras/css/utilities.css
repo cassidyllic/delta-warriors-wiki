@@ -1,0 +1,53 @@
+/* utilities.css */
+
+:root {
+  --float-duration: 4s;
+  --float-direction: 1;
+  --float-distance: 2px;
+  --rotation-angle: 0deg;
+}
+
+/* General stuff */
+.upside-down {
+  display: inline-block;
+  transform: rotate(180deg);
+  --rotation-angle: 180deg;
+  --float-direction: -1;
+}
+
+img.svg-inline {
+  visibility: hidden;
+}
+
+/* Float Animation */
+.float {
+  animation: float var(--float-duration) ease-in-out infinite;
+}
+
+.float.slow {
+  --float-duration: 6s;
+}
+
+.float.fast {
+  --float-duration: 2s;
+}
+
+.float.subtle {
+  --float-distance: 1px;
+}
+
+.float.pronounced {
+  --float-distance: 4px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: rotate(var(--rotation-angle))
+      translateY(calc(var(--float-direction) * var(--float-distance)));
+  }
+  50% {
+    transform: rotate(var(--rotation-angle))
+      translateY(calc(var(--float-direction) * -1 * var(--float-distance)));
+  }
+}

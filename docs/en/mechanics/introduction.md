@@ -23,8 +23,8 @@ Players are asked a series of bizarre, surreal questions. Their responses shape 
 
 **Delta Warriors is currently in early access.** Only **two** Soul Traits can currently be obtained from the Survey:
 
-- :material-heart:{ .bravery .float .subtle } [Bravery](../souls/bravery.md){ .bravery }
-- :material-heart:{ .integrity .float .subtle } [Integrity](../souls/integrity.md){ .integrity }
+- :material-heart:{ .bravery .float .subtle } [Bravery](https://example.com){ .bravery }
+- :material-heart:{ .integrity .float .subtle } [Integrity](https://example.com){ .integrity }
 
 The remaining traits will temporarily transform into one of the available ones:
 

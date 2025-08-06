@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>December Holiday</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      img {
+        max-width: 80vw;
+        max-height: 60vh;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="/delta-warriors-wiki/_assets/img/holiday.webp"
+      alt="(It's her guitar.)"
+    />
+    <div style="margin-bottom: 10px">
+      (There's a dark triangle on the ground.)
+    </div>
+
+    <div style="margin-top: 10px">
+      <a
+        href="/delta-warriors-wiki/your_hand.html"
+        id="go-back"
+        style="margin-right: 10px"
+        >Take it</a
+      >
+      <a href="/" id="go-back">Go back</a>
+    </div>
+
+    <audio autoplay loop>
+      <source
+        src="/delta-warriors-wiki/_assets/mus/findher.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="/delta-warriors-wiki/_assets/mus/findher.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+
+    <script>
+      if (document.cookie.includes("saw1225=true")) {
+        window.location.href = "/404.html";
+      }
+    </script>
+  </body>
+</html>
