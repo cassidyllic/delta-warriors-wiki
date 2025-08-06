@@ -1,8 +1,10 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 # Site Information
-site_name: Delta Warriors Wiki
-site_description: A comprehensive wiki for Delta Warriors
 site_author: Cassidyllic
+site_description: A comprehensive wiki for Delta Warriors
+site_name: Delta Warriors Wiki
+site_url: https://cassidyllic.github.io/delta-warriors-wiki/
+
 copyright: Deltarune &copy; by Toby Fox | Delta Warriors by Idyll Works - Wiki is Open Source
 
 # Extra Configuration
