@@ -1,0 +1,139 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+# Site Information
+site_name: Delta Warriors Wiki
+site_description: A comprehensive wiki for Delta Warriors
+site_author: Cassidyllic
+copyright: Deltarune &copy; by Toby Fox | Delta Warriors by Idyll Works - Wiki is Open Source
+
+# Extra Configuration
+extra:
+  social:
+    - icon: simple/discord
+      link: https://discord.gg/9v5CMsqrAc
+      name: Official Discord server
+    - icon: simple/robloxstudio
+      link: https://www.roblox.com/communities/7344131/Idyll-Works#!/about
+      name: Official Roblox community
+    - icon: bootstrap/deltarune
+      link: https://deltarune.com/
+      name: Deltarune by Toby Fox
+
+extra_css:
+  - _extras/css/base.css
+  - _extras/css/components.css
+  - _extras/css/dynamic-themes.css
+  - _extras/css/utilities.css
+
+extra_javascript:
+  - _extras/js/dynamic-theme.js
+  - _extras/js/dynamic-svg.js
+
+# Extensions & Plugins
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: fr
+          name: Français
+          build: true
+          nav_translations:
+            Home: Accueil
+            Mechanics: Mécaniques
+            Soul Traits: Âmes
+            Equipment: Équipement
+            Weapons: Armes
+            Accessories: Accessoires
+            Locations: Lieux
+            NPCs: PNJs
+        - locale: ja
+          name: 日本語
+          build: true
+        - locale: pt-BR
+          name: Português Brasileiro
+          build: true
+  - macros
+  - meta
+  - search
+
+# Navigation
+nav:
+  - Home:
+      - index.md
+      - Credits: credit.md
+      - Updates:
+          - updates/index.md
+          - 1.0.0: updates/v1-0-0.md
+  - Mechanics:
+      - mechanics/index.md
+      - The Survey: mechanics/introduction.md
+      - Rarities: mechanics/rarities.md
+      - Fountains: mechanics/fountains.md
+      - Experience: mechanics/exp.md
+      - Upgrades: mechanics/growth.md
+  - Soul Traits:
+      - souls/index.md
+  - Equipment:
+      - equipment/index.md
+      - Weapons:
+          - equipment/weapons/index.md
+      - Accessories:
+          - equipment/accessories/index.md
+  - Locations:
+      - locations/index.md
+      - Hometown:
+          - locations/hometown/index.md
+      - Closet Dark World:
+          - locations/closet-world/index.md
+  - NPCs:
+      - npcs/index.md
+
+# Theme Configuration
+theme:
+  custom_dir: overrides
+  favicon: _assets/img/deltarune.svg
+  features:
+    - navigation.indexes
+    - navigation.path
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.share
+    - search.suggest
+  font:
+    text: Mozilla Text
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Dark Mode
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Light Mode

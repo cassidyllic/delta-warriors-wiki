@@ -1,0 +1,26 @@
+// Create rules for per-page-theme dynamically.
+@mixin page-theme($page-class, $color) {
+  $color-light: mix(white, $color, 20%);
+  $color-dark: mix(black, $color, 10%);
+  $color-transparent: rgba($color, 0.1);
+
+  body.#{$page-class} > * {
+    --md-primary-fg-color: #{$color};
+    --md-primary-fg-color--light: #{$color-light};
+    --md-primary-fg-color--dark: #{$color-dark};
+
+    --md-primary-bg-color: #fff;
+    --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+
+    --md-accent-fg-color: #{$color};
+    --md-accent-fg-color--transparent: #{$color-transparent};
+    --md-accent-bg-color: #fff;
+    --md-accent-bg-color--light: rgba(255, 255, 255, 0.7);
+
+    --md-typeset-a-color: #{$color-dark};
+  }
+}
+
+$bravery: #f9a709;
+
+@include page-theme(page-souls-bravery, $bravery);
