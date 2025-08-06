@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>your_hand.html</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      #message {
+        margin-bottom: 1.5rem;
+      }
+
+      .quote {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>You tried to take it...</div>
+    <div>But, it slipped through your hand.</div>
+    <div>And you couldn't find it anymore.</div>
+    <div>You couldn't find</div>
+    <div style="margin-top: 50px">your hand.</div>
+  </body>
+
+  <script>
+    if (document.cookie.includes("saw1225=true")) {
+      window.location.href = "/404.html";
+    } else {
+      document.cookie = "saw1225=true; max-age=31536000";
+    }
+  </script>
+</html>
