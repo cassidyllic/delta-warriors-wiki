@@ -1,156 +1,63 @@
-/* components.css */
-
-:root {
-  --tag-border: var(--md-primary-fg-color--light);
-  --tag-color: var(--md-primary-fg-color--light);
-}
-
-/* Infobox Components */
+/* Components for the pages. */
+/* Infobox */
 .infobox {
   background: var(--md-code-bg-color);
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 4px;
-  clear: right;
+  border-radius: 8px;
   float: right;
   font-size: 0.7rem;
   margin: -0.5rem 0 1rem 1rem;
   max-width: 280px;
   min-width: 150px;
   padding: 10px;
+  text-align: center;
   width: auto;
 }
 
-.infobox-header,
-.infobox-title {
+.infobox-divider {
   background: var(--md-primary-fg-color);
   border-radius: 4px;
   color: white;
-  font-weight: bold;
   margin: 0;
   text-align: center;
 }
 
-.infobox-header {
-  line-height: 1.5;
+.infobox-divider.header {
+  font-weight: bolder;
+  line-height: 1.25;
   padding: 8px;
 }
 
-.infobox-title {
+.infobox-divider.sub-header {
+  font-weight: bold;
   line-height: 1;
   padding: 6px 8px;
 }
 
-/* Invisible Table */
-.invisible-table {
-  background: transparent !important;
-  border: none !important;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.invisible-table td,
-.invisible-table th {
-  background: transparent !important;
-  border: none !important;
-  padding: 8px 12px !important;
-  text-align: left !important;
-  vertical-align: top !important;
-}
-
-/* Hover Tooltips */
-.hover {
-  cursor: help;
-  position: relative;
-  z-index: 1; /* Establish stacking context */
-}
-
-.hover::after {
-  background: var(--md-code-bg-color);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  clip-path: none;
-  color: var(--md-code-fg-color);
-  content: attr(hover);
-  font-family: inherit;
-  font-size: 0.5rem;
-  left: 50%;
-  opacity: 0;
-  overflow: visible;
-  padding: 6px 10px;
-  pointer-events: none;
-  position: absolute;
-  top: 125%;
-  transform: translateX(-50%) scale(0.8);
-  transform-origin: top center;
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-  white-space: nowrap;
-  z-index: 9999; /* Much higher z-index */
-}
-
-.hover:hover::after {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(-50%) scale(1);
-}
-
-/* Page-Tag Component */
-.page-tag {
-  border: 1px solid var(--md-primary-fg-color);
-  border-radius: 4px;
-  color: var(--md-primary-fg-color);
-  display: inline-block;
-  font-family: inherit;
-  font-size: 80%;
-  margin: 0 2px;
-  padding: 2px 6px;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-/* Tag Components */
-.tag-base {
-  border-radius: 4px;
-  display: inline-block;
-  font-family: inherit;
-  font-size: 50%;
-  font-weight: 500;
-  margin: 0 1px;
-  padding: 1px 4px;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.elemental {
-  border: 1px solid;
-  color: inherit;
-}
-
-.elemental.fire {
-  border-color: orangered;
-  color: orangered;
-}
-
-.elemental.wind {
-  border-color: aquamarine;
-  color: aquamarine;
+/* Badges and Tags */
+.badge {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .tag {
-  border: 1px solid var(--tag-border);
-  color: var(--tag-color);
+  border: 1px solid var(--md-primary-fg-color);
+  border-radius: 4px;
+  color: var(--md-primary-fg-color);
+  font-size: 80%;
+  margin: 0 2px;
+  padding: 2px 6px;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
-.tp {
-  border-bottom: 1px dotted var(--tag-color);
-  border-radius: 0;
-  color: var(--tag-color);
-  padding: 0;
-  position: relative;
-}
-
-/* Rarity Base Class */
+/* Rarity */
 /* Common (C) */
 .rarity-c {
   background: linear-gradient(45deg, #b8b8b8, #d0d0d0);
@@ -296,7 +203,6 @@
     pulse-ex 2s ease-in-out infinite alternate;
 }
 
-/* Animations */
 @keyframes subtle-flow {
   0%,
   100% {

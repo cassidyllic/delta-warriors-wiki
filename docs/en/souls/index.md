@@ -48,14 +48,10 @@ There are two ways to obtain a Soul Trait, each with its own caveats:
 
 This list contains Soul Traits that are fully implemented into the game.
 
-|              Rarity              | {{ center("Soul Trait") }}         | {{ center("Original User") }} |                        Appearance                        |
-| :------------------------------: | ---------------------------------- | ----------------------------- | :------------------------------------------------------: |
-|  {{ rarity("uc", 8, "club") }}   | [Bravery](/404.html)     | Third fallen human            |       :material-heart:{ .bravery .float .subtle }        |
-|  {{ rarity("uc", 5, "club") }}   | [Integrity](https://example.com)   | Fourth fallen human           |      :material-heart:{ .integrity .float .subtle }       |
-| {{ rarity("r", "J", "spade") }}  | [Mischief](https://example.com)    | Lancer                        |   :material-heart-outline:{ .mischief .float .subtle }   |
-|  {{ rarity("r", 7, "heart") }}   | [Reverence](https://example.com)   | Ralsei                        |  :material-heart-outline:{ .reverence .float .subtle }   |
-|  {{ rarity("sr", 6, "spade") }}  | [Ambivalence](https://example.com) | Kris (Dark World)             |     :material-heart:{ .ambivalence .float .subtle }      |
-| {{ rarity("ssr", "Q", "club") }} | [Fervour](https://example.com)     | Susie (Dark World)            | :material-heart:{ .fervour .float .subtle .upside-down } |
+|            Rarity             | {{ center("Soul Trait") }}       | {{ center("Original User") }} |                  Appearance                   |
+| :---------------------------: | -------------------------------- | ----------------------------- | :-------------------------------------------: |
+| {{ rarity("uc", 8, "club") }} | [Bravery](./bravery.md)          | Third fallen human            |  :material-heart:{ .bravery .float .subtle }  |
+| {{ rarity("uc", 5, "club") }} | [Integrity](https://example.com) | Fourth fallen human           | :material-heart:{ .integrity .float .subtle } |
 
 ---
 

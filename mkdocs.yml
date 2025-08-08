@@ -21,14 +21,9 @@ extra:
       name: Deltarune by Toby Fox
 
 extra_css:
-  - _extras/css/base.css
-  - _extras/css/components.css
-  - _extras/css/dynamic-themes.css
-  - _extras/css/utilities.css
-
-extra_javascript:
-  - _extras/js/dynamic-theme.js
-  - _extras/js/dynamic-svg.js
+  - css/components.css
+  - css/stylesheet.css
+  - css/utilities.css
 
 # Extensions & Plugins
 markdown_extensions:
@@ -48,6 +43,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - tables
 
 plugins:
   - i18n:
@@ -96,6 +92,7 @@ nav:
       - Upgrades: mechanics/growth.md
   - Soul Traits:
       - souls/index.md
+      - Bravery: souls/bravery.md
   - Equipment:
       - equipment/index.md
       - Weapons:
@@ -111,10 +108,13 @@ nav:
   - NPCs:
       - npcs/index.md
 
+not_in_nav: |
+  en/debugPage.md
+
 # Theme Configuration
 theme:
   custom_dir: overrides
-  favicon: _assets/img/deltarune.svg
+  favicon: assets/img/deltarune.svg
   features:
     - navigation.indexes
     - navigation.path
@@ -124,18 +124,18 @@ theme:
     - search.share
     - search.suggest
   font:
-    text: Mozilla Text
+    text: Raleway
   name: material
   palette:
     - scheme: default
-      primary: teal
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Dark Mode
     - scheme: slate
-      primary: teal
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Light Mode

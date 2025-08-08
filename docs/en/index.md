@@ -31,4 +31,4 @@ Join our community to stay updated and connect with other players:
 ---
 
 _This wiki is open-source. Found an error? Let us know on Discord!_  
-_debugString04_
+[_debugString04_](./debugPage.md)

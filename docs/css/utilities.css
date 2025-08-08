@@ -1,0 +1,140 @@
+/* Handle utilities rules such as animations and visibility*/
+
+:root {
+  --float-duration: 4s;
+  --float-direction: 1;
+  --float-distance: 2px;
+  --rotation-angle: 0deg;
+}
+
+/* Invisible */
+.invisible {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.invisible.table,
+table.invisible {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.invisible td,
+.invisible th,
+td.invisible,
+th.invisible {
+  background: transparent !important;
+  border: none !important;
+  padding: 8px 12px !important;
+  text-align: left !important;
+  vertical-align: top !important;
+}
+
+.invisible.button,
+button.invisible,
+.invisible input,
+input.invisible {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.invisible.card,
+.invisible.panel,
+div.invisible {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.invisible.list,
+ul.invisible,
+ol.invisible {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.invisible li,
+li.invisible {
+  background: transparent !important;
+  border: none !important;
+  list-style: none !important;
+}
+
+/* Hover */
+.hover {
+  cursor: help;
+  position: relative;
+}
+
+.hover::after {
+  background: var(--md-code-bg-color);
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  clip-path: none;
+  color: var(--md-code-fg-color);
+  content: attr(hover);
+  font-size: 0.5rem;
+  left: 50%;
+  opacity: 0;
+  overflow: visible;
+  padding: 6px 10px;
+  pointer-events: none;
+  position: absolute;
+  top: 125%;
+  transform: translateX(-50%) scale(0.8);
+  transform-origin: top center;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.hover:hover::after {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Float & Attributes */
+.upside-down {
+  display: inline-block;
+  transform: rotate(180deg);
+  --rotation-angle: 180deg;
+  --float-direction: -1;
+}
+
+.float {
+  animation: float var(--float-duration) ease-in-out infinite;
+}
+
+.float.slow {
+  --float-duration: 6s;
+}
+
+.float.fast {
+  --float-duration: 2s;
+}
+
+.float.subtle {
+  --float-distance: 1px;
+}
+
+.float.pronounced {
+  --float-distance: 4px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: rotate(var(--rotation-angle))
+      translateY(calc(var(--float-direction) * var(--float-distance)));
+  }
+  50% {
+    transform: rotate(var(--rotation-angle))
+      translateY(calc(var(--float-direction) * -1 * var(--float-distance)));
+  }
+}

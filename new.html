@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deltarune Technique Database</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Courier New", monospace;
+        background: #0a0a0a;
+        color: #e0e0e0;
+        line-height: 1.4;
+        padding: 20px;
+      }
+
+      .wiki-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #111111;
+        border: 2px solid #333;
+        border-radius: 8px;
+      }
+
+      .wiki-header {
+        background: linear-gradient(135deg, #1e3a5f, #2d4a87);
+        color: white;
+        padding: 24px 32px;
+        border-bottom: 2px solid #4a90e2;
+      }
+
+      .wiki-title {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 4px;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .wiki-subtitle {
+        font-size: 0.9em;
+        opacity: 0.8;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .wiki-content {
+        padding: 32px;
+      }
+
+      .search-container {
+        margin-bottom: 24px;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 12px 16px;
+        background: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 4px;
+        color: #e0e0e0;
+        font-family: "Courier New", monospace;
+        font-size: 0.95em;
+      }
+
+      .search-input:focus {
+        outline: none;
+        border-color: #4a90e2;
+        background: #222;
+      }
+
+      .technique-entry {
+        display: grid;
+        grid-template-columns: 1fr 160px;
+        gap: 20px;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid #222;
+        transition: all 0.2s ease;
+      }
+
+      .technique-entry:hover {
+        background: rgba(74, 144, 226, 0.05);
+        padding-left: 8px;
+      }
+
+      .technique-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .technique-header {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 4px;
+      }
+
+      .technique-name {
+        font-weight: bold;
+        color: #ffffff;
+        font-size: 1.1em;
+      }
+
+      .technique-cost {
+        color: #4a90e2;
+        font-size: 0.9em;
+        font-weight: bold;
+      }
+
+      .technique-description {
+        color: #bbb;
+        font-size: 0.9em;
+        font-style: italic;
+        margin-bottom: 4px;
+      }
+
+      .technique-attributes {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .attribute {
+        font-size: 0.85em;
+        color: #999;
+      }
+
+      .attribute-label {
+        color: #777;
+      }
+
+      .attribute-value {
+        color: #ccc;
+        font-weight: bold;
+      }
+
+      .type-badge {
+        background: #333;
+        color: #fff;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.75em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .magic {
+        background: #8e44ad;
+      }
+      .physical {
+        background: #c0392b;
+      }
+      .ice {
+        background: #2980b9;
+      }
+      .dark {
+        background: #2c3e50;
+      }
+      .light {
+        background: #e67e22;
+      }
+      .healing {
+        background: #229954;
+      }
+
+      .technique-image {
+        width: 160px;
+        height: 90px;
+        border-radius: 6px;
+        object-fit: cover;
+        border: 2px solid #333;
+        transition: all 0.2s ease;
+      }
+
+      .technique-entry:hover .technique-image {
+        border-color: #4a90e2;
+        box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+      }
+
+      .stats-bar {
+        background: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 4px;
+        padding: 16px;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+      }
+
+      .stat-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .stat-number {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #4a90e2;
+      }
+
+      .stat-label {
+        font-size: 0.8em;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Mobile responsive */
+      @media (max-width: 768px) {
+        .technique-entry {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .technique-image {
+          width: 100%;
+          height: 120px;
+          justify-self: center;
+          max-width: 280px;
+        }
+
+        .technique-attributes {
+          gap: 8px;
+        }
+
+        .stats-bar {
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .wiki-content {
+          padding: 20px;
+        }
+      }
+
+      /* Loading animation */
+      .technique-entry {
+        opacity: 0;
+        animation: fadeInUp 0.4s ease forwards;
+      }
+
+      .technique-entry:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .technique-entry:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .technique-entry:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4a90e2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wiki-container">
+      <div class="wiki-header">
+        <h1 class="wiki-title">TECHNIQUE DATABASE</h1>
+        <p class="wiki-subtitle">Dark World Combat Arts & Spells</p>
+      </div>
+
+      <div class="wiki-content">
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search techniques..."
+          />
+        </div>
+
+        <div class="stats-bar">
+          <div class="stat-item">
+            <span class="stat-number">24</span>
+            <span class="stat-label">Total Techniques</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Categories</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Rare Techniques</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">16</span>
+            <span class="stat-label">Common Techniques</span>
+          </div>
+        </div>
+
+        <div class="technique-entry">
+          <div class="technique-info">
+            <div class="technique-header">
+              <span class="technique-name">Rude Buster</span>
+              <span class="technique-cost">[32% TP]</span>
+            </div>
+            <div class="technique-description">
+              A devastating magical blast that strikes all enemies with
+              concentrated dark energy
+            </div>
+            <div class="technique-attributes">
+              <span class="type-badge magic">Magic</span>
+              <span class="attribute"
+                ><span class="attribute-label">ATK:</span>
+                <span class="attribute-value">140</span></span
+              >
+              <span class="attribute"
+                ><span class="attribute-label">Targets:</span>
+                <span class="attribute-value">All Enemies</span></span
+              >
+              <span class="attribute"
+                ><span class="attribute-label">Element:</span>
+                <span class="attribute-value">Dark</span></span
+              >
+            </div>
+          </div>
+          <img
+            src="https://via.placeholder.com/160x90/8e44ad/ffffff?text=Rude+Buster"
+            alt="Rude Buster"
+            class="technique-image"
+          />
+        </div>
+
+        <div class="technique-entry">
+          <div class="technique-info">
+            <div class="technique-header">
+              <span class="technique-name">Heal Prayer</span>
+              <span class="technique-cost">[16% TP]</span>
+            </div>
+            <div class="technique-description">
+              Ralsei channels divine light magic to restore an ally's HP
+            </div>
+            <div class="technique-attributes">
+              <span class="type-badge healing">Healing</span>
+              <span class="attribute"
+                ><span class="attribute-label">Heal:</span>
+                <span class="attribute-value">80-120</span></span
+              >
+              <span class="attribute"
+                ><span class="attribute-label">Targets:</span>
+                <span class="attribute-value">Single Ally</span></span
+              >
+              <span class="attribute"
+                ><span class="attribute-label">Element:</span>
+                <span class="attribute-value">Light</span></span
+              >
+            </div>
+          </div>
+          <img
+            src="https://via.placeholder.com/160x90/229954/ffffff?text=Heal+Prayer"
+            alt="Heal Prayer"
+            class="technique-image"
+          />
+        </div>
+
+        <div class="technique-entry">
+          <div class="technique-info">
+            <div class="technique-header">
+              <span class="technique-name">Ice Shock</span>
+              <span class="technique-cost">[22% TP]</span>
+            </div>
+            <div class="technique-description">
+              Noelle summons frigid ice crystals to strike a single enemy
+            </div>
+            <div class="technique-attributes">
+              <span class="type-badge ice">Ice</span>
+              <span class="attribute"
+                ><span class="attribute-label">ATK:</span>
+                <span class="attribute-value">95</span></span
+              >
+              <span class="attribute"
+                ><span class="attribute-label">Targets:</span>
+                <span class="attribute-value">Single Enemy</span></span
+              >
+              <span class="attribute"
+                ><span class="attribute-label">Status:</span>
+                <span class="attribute-value">Freeze (25%)</span></span
+              >
+            </div>
+          </div>
+          <img
+            src="https://via.placeholder.com/160x90/2980b9/ffffff?text=Ice+Shock"
+            alt="Ice Shock"
+            class="technique-image"
+          />
+        </div>
+
+        <div class="technique-entry">
+          <div class="technique-info">
+            <div class="technique-header">
+              <span class="technique-name">Red Buster</span>
+              <span class="technique-cost">[50% TP]</span>
+            </div>
+            <div class="technique-description">
+              Susie's ultimate axe technique that cleaves through enemy defenses
+            </div>
+            <div class="technique-attributes">
+              <span class="type-badge physical">Physical</span>
+              <span class="attribute"
+                ><span class="attribute-label">ATK:</span>
+                <span class="attribute-value">180</span></span
+              >
+              <span class="attribute"
+                ><span class="attribute-label">Targets:</span>
+                <span class="attribute-value">Single Enemy</span></span
+              >
+              <span class="attribute"
+                ><span class="attribute-label">Effect:</span>
+                <span class="attribute-value">Pierces Defense</span></span
+              >
+            </div>
+          </div>
+          <img
+            src="https://via.placeholder.com/160x90/c0392b/ffffff?text=Red+Buster"
+            alt="Red Buster"
+            class="technique-image"
+          />
+        </div>
+
+        <div class="technique-entry">
+          <div class="technique-info">
+            <div class="technique-header">
+              <span class="technique-name">Pacify</span>
+              <span class="technique-cost">[10% TP]</span>
+            </div>
+            <div class="technique-description">
+              Ralsei's soothing magic that can make enemies drowsy and less
+              aggressive
+            </div>
+            <div class="technique-attributes">
+              <span class="type-badge light">Light</span>
+              <span class="attribute"
+                ><span class="attribute-label">Effect:</span>
+                <span class="attribute-value">Sleep (60%)</span></span
+              >
+              <span class="attribute"
+                ><span class="attribute-label">Targets:</span>
+                <span class="attribute-value">Single Enemy</span></span
+              >
+              <span class="attribute"
+                ><span class="attribute-label">Duration:</span>
+                <span class="attribute-value">2-3 turns</span></span
+              >
+            </div>
+          </div>
+          <img
+            src="https://via.placeholder.com/160x90/e67e22/ffffff?text=Pacify"
+            alt="Pacify"
+            class="technique-image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Search functionality
+      const searchInput = document.querySelector(".search-input");
+      const techniqueEntries = document.querySelectorAll(".technique-entry");
+
+      searchInput.addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+
+        techniqueEntries.forEach((entry) => {
+          const name = entry
+            .querySelector(".technique-name")
+            .textContent.toLowerCase();
+          const description = entry
+            .querySelector(".technique-description")
+            .textContent.toLowerCase();
+          const attributes = Array.from(
+            entry.querySelectorAll(".attribute-value")
+          )
+            .map((el) => el.textContent.toLowerCase())
+            .join(" ");
+          const type =
+            entry.querySelector(".type-badge")?.textContent.toLowerCase() || "";
+
+          if (
+            name.includes(searchTerm) ||
+            description.includes(searchTerm) ||
+            attributes.includes(searchTerm) ||
+            type.includes(searchTerm)
+          ) {
+            entry.style.display = "grid";
+          } else {
+            entry.style.display = "none";
+          }
+        });
+      });
+
+      // Smooth scroll reveal
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = "fadeInUp 0.4s ease forwards";
+          }
+        });
+      }, observerOptions);
+
+      // Enhanced interactions
+      techniqueEntries.forEach((entry) => {
+        observer.observe(entry);
+
+        entry.addEventListener("click", () => {
+          // Could expand to show more details
+          console.log(
+            "Clicked:",
+            entry.querySelector(".technique-name").textContent
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
