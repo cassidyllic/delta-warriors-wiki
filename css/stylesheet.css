@@ -1,0 +1,179 @@
+/* Handle edits to the MKDocs-Material theme */
+
+:root {
+  --stat-endurance-color: seagreen;
+  --stat-strength-color: crimson;
+  --stat-technique-color: royalblue;
+
+  --soul-bravery-color: #f9a709;
+  --soul-integrity-color: #003eff;
+  --soul-justice-color: #ffff00;
+  --soul-kindness-color: #00c700;
+  --soul-patience-color: #42e2ff;
+  --soul-perseverance-color: #992099;
+
+  --type-dark-color: #585665;
+  --type-electric-color: #eed559;
+  --type-fire-color: #f1a662;
+  --type-ice-color: #8dccc0;
+  --type-rude-color: #bc4a6a;
+  --type-wind-color: #99a8d9;
+}
+
+/* Theme Colours */
+[data-md-color-scheme="slate"] {
+  --md-hue: 250;
+}
+
+:root * > {
+  --md-primary-fg-color: #1976d2;
+  --md-primary-fg-color--light: #42a5f5;
+  --md-primary-fg-color--dark: #1565c0;
+  --md-accent-fg-color: #1976d2;
+  --md-accent-fg-color--transparent: rgba(25, 118, 210, 0.1);
+  --md-typeset-a-color: #1565c0;
+}
+
+/* Override elements */
+.md-logo {
+  display: none !important;
+}
+
+blockquote {
+  border-left: 2px solid var(--md-primary-fg-color) !important;
+}
+
+.infobox figcaption {
+  margin-bottom: 0;
+}
+
+/* Force vertically centred alignment. */
+td,
+th {
+  vertical-align: middle !important;
+}
+
+/* Convenient classes */
+.endurance {
+  color: var(--stat-endurance-color);
+}
+
+.strength {
+  color: var(--stat-strength-color);
+}
+
+.technique {
+  color: var(--stat-technique-color);
+}
+
+.bravery {
+  color: var(--soul-bravery-color);
+}
+
+.integrity {
+  color: var(--soul-integrity-color);
+}
+
+.justice {
+  color: var(--soul-justice-color);
+}
+
+.kindness {
+  color: var(--soul-kindness-color);
+}
+
+.patience {
+  color: var(--soul-patience-color);
+}
+
+.perseverance {
+  color: var(--soul-perseverance-color);
+}
+
+.dark {
+  color: var(--type-dark-color);
+}
+
+.electric {
+  color: var(--type-electric-color);
+}
+
+.fire {
+  color: var(--type-fire-color);
+}
+
+.ice {
+  color: var(--type-ice-color);
+}
+
+.rude {
+  color: var(--type-rude-color);
+}
+
+.wind {
+  color: var(--type-wind-color);
+}
+
+/* Badges */
+.badge.dark {
+  background: var(--type-dark-color);
+  color: #fff;
+}
+
+.badge.dark::before {
+  background-image: url(../assets/img/elements/dark.svg);
+}
+
+.badge.electric {
+  background: var(--type-electric-color);
+  color: #fff;
+}
+
+.badge.electric::before {
+  background-image: url(../assets/img/elements/electric.svg);
+}
+
+.badge.fire {
+  background: var(--type-fire-color);
+  color: #fff;
+}
+
+.badge.fire::before {
+  background-image: url(../assets/img/elements/fire.svg);
+}
+
+.badge.ice {
+  background: var(--type-ice-color);
+  color: #fff;
+}
+
+.badge.ice::before {
+  background-image: url(../assets/img/elements/ice.svg);
+}
+
+.badge.rude {
+  background: var(--type-rude-color);
+  color: #fff;
+}
+
+.badge.rude::before {
+  background-image: url(../assets/img/elements/rude.svg);
+}
+
+.badge.wind {
+  background: var(--type-wind-color);
+  color: #fff;
+}
+
+.badge.wind::before {
+  background-image: url(../assets/img/elements/wind.svg);
+}
+
+.badge.star {
+  background: #000;
+  border: 2px solid #fff;
+}
+
+.badge.star::before {
+  background-image: url(../assets/img/elements/star.svg);
+}
