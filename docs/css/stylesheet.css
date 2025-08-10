@@ -43,31 +43,25 @@ blockquote {
   border-left: 2px solid var(--md-primary-fg-color) !important;
 }
 
-/* Allow table overflow */
-table,
-tbody,
-tr,
-td,
-th {
-  overflow: visible !important;
-  contain: none !important;
+.infobox figcaption {
+  margin-bottom: 0;
 }
 
-.table-container,
-.table-wrapper,
-.md-typeset div:has(table),
-div:has(table) {
-  overflow: visible !important;
-  contain: none !important;
+/* Force vertically centred alignment. */
+td,
+th {
+  vertical-align: middle !important;
 }
 
 /* Convenient classes */
 .endurance {
   color: var(--stat-endurance-color);
 }
+
 .strength {
   color: var(--stat-strength-color);
 }
+
 .technique {
   color: var(--stat-technique-color);
 }
@@ -75,18 +69,23 @@ div:has(table) {
 .bravery {
   color: var(--soul-bravery-color);
 }
+
 .integrity {
   color: var(--soul-integrity-color);
 }
+
 .justice {
   color: var(--soul-justice-color);
 }
+
 .kindness {
   color: var(--soul-kindness-color);
 }
+
 .patience {
   color: var(--soul-patience-color);
 }
+
 .perseverance {
   color: var(--soul-perseverance-color);
 }
@@ -121,9 +120,17 @@ div:has(table) {
   color: #fff;
 }
 
+.badge.dark::before {
+  background-image: url(../assets/img/elements/dark.svg);
+}
+
 .badge.electric {
   background: var(--type-electric-color);
   color: #fff;
+}
+
+.badge.electric::before {
+  background-image: url(../assets/img/elements/electric.svg);
 }
 
 .badge.fire {
@@ -131,9 +138,17 @@ div:has(table) {
   color: #fff;
 }
 
+.badge.fire::before {
+  background-image: url(../assets/img/elements/fire.svg);
+}
+
 .badge.ice {
   background: var(--type-ice-color);
   color: #fff;
+}
+
+.badge.ice::before {
+  background-image: url(../assets/img/elements/ice.svg);
 }
 
 .badge.rude {
@@ -141,12 +156,24 @@ div:has(table) {
   color: #fff;
 }
 
+.badge.rude::before {
+  background-image: url(../assets/img/elements/rude.svg);
+}
+
 .badge.wind {
   background: var(--type-wind-color);
   color: #fff;
 }
 
+.badge.wind::before {
+  background-image: url(../assets/img/elements/wind.svg);
+}
+
 .badge.star {
   background: #000;
   border: 2px solid #fff;
+}
+
+.badge.star::before {
+  background-image: url(../assets/img/elements/star.svg);
 }

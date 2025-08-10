@@ -41,6 +41,9 @@ markdown_extensions:
           - overrides/.icons
   - pymdownx.keys
   - pymdownx.superfences
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
   - pymdownx.tabbed:
       alternate_style: true
   - tables
@@ -82,40 +85,37 @@ nav:
       - Credits: credit.md
       - Updates:
           - updates/index.md
-          - 1.0.0: updates/v1-0-0.md
+          # - 1.0.0: updates/v1-0-0.md
   - Mechanics:
       - mechanics/index.md
-      - The Survey: mechanics/introduction.md
+      - Basic Combat: mechanics/combat.md
+      - Dark Fountains: mechanics/fountains.md
+      - Exp and Upgrading: mechanics/exp.md
       - Rarities: mechanics/rarities.md
-      - Fountains: mechanics/fountains.md
-      - Experience: mechanics/exp.md
-      - Upgrades: mechanics/growth.md
-  - Soul Traits:
-      - souls/index.md
-      - Bravery: souls/bravery.md
-  - Equipment:
-      - equipment/index.md
-      - Weapons:
-          - equipment/weapons/index.md
-      - Accessories:
-          - equipment/accessories/index.md
-  - Locations:
-      - locations/index.md
-      - Hometown:
-          - locations/hometown/index.md
-      - Closet Dark World:
-          - locations/closet-world/index.md
-  - NPCs:
-      - npcs/index.md
-
-not_in_nav: |
-  en/debugPage.md
+  # - Soul Traits:
+  #     - souls/index.md
+  #     - Bravery: souls/bravery.md
+  # - Equipment:
+  #     - equipment/index.md
+  #     - Weapons:
+  #         - equipment/weapons/index.md
+  #     - Accessories:
+  #         - equipment/accessories/index.md
+  # - Locations:
+  #     - locations/index.md
+  #     - Hometown:
+  #         - locations/hometown/index.md
+  #     - Closet Dark World:
+  #         - locations/closet-world/index.md
+  # - NPCs:
+  #     - npcs/index.md
 
 # Theme Configuration
 theme:
   custom_dir: overrides
   favicon: assets/img/deltarune.svg
   features:
+    - content.tooltips
     - navigation.indexes
     - navigation.path
     - navigation.sections
@@ -125,17 +125,15 @@ theme:
     - search.suggest
   font:
     text: Raleway
+  icon:
+    annotation: material/image
   name: material
   palette:
-    - scheme: default
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/brightness-7
-        name: Dark Mode
-    - scheme: slate
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/brightness-4
-        name: Light Mode
+    accent: custom
+    primary: custom
+    scheme: slate
+
+# Serve convenience
+watch:
+  - includes
+  - overrides

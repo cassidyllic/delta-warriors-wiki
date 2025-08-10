@@ -4,6 +4,7 @@
   background: var(--md-code-bg-color);
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   float: right;
   font-size: 0.7rem;
   margin: -0.5rem 0 1rem 1rem;
@@ -36,14 +37,28 @@
 
 /* Badges and Tags */
 .badge {
+  align-items: flex-start;
   background: var(--md-primary-fg-color);
-  color: #fff;
-  padding: 2px 8px;
   border-radius: 12px;
-  font-size: 0.75em;
+  color: #fff;
+  display: inline-flex;
+  font-size: 0.7em;
   font-weight: bold;
-  text-transform: uppercase;
+  gap: 0.25em;
   letter-spacing: 0.5px;
+  padding: 2px 8px;
+  text-transform: uppercase;
+}
+
+.badge::before {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  filter: brightness(0) saturate(100%) invert(100%);
+  flex-shrink: 0;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 .tag {
@@ -55,6 +70,51 @@
   padding: 2px 6px;
   vertical-align: middle;
   white-space: nowrap;
+}
+
+/* Technique cards */
+.technique {
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 10em;
+  position: relative;
+}
+
+.technique img {
+  aspect-ratio: 16/9;
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  height: calc(100% - 2em);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.technique-content {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  bottom: 3em;
+  right: calc(35% + 1em);
+  overflow: hidden;
+  color: var(--md-default-fg-color);
+}
+
+.technique-attributes {
+  position: absolute;
+  left: 1em;
+  top: calc(100% - 3em);
+  bottom: 1em;
+  right: calc(35% + 1em);
+  overflow: hidden;
+  color: var(--md-default-fg-color);
+  display: flex;
+  align-items: flex-end;
 }
 
 /* Rarity */

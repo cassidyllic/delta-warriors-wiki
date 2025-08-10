@@ -18,9 +18,8 @@ icon: material/heart-multiple
 
 - [Brisk](https://www.roblox.com/users/122009023/profile)
 - [Cassidylic](https://www.roblox.com/users/1298670670/profile)
-- [MidPieceENTHUSIAST](https://www.roblox.com/users/569522794/profile)
+- [MidPieceENTHUSIAST](https://www.roblox.com/users/569522794/profile) :medal:
 - [mixedupfun](https://www.roblox.com/users/418973354/profile)
-- [Noc](https://www.roblox.com/users/716943240/profile)
 
 ### Localization Team
 
@@ -41,8 +40,3 @@ icon: material/heart-multiple
 
 - Original Deltarune OST by Toby Fox
 - Multiple remixes by: <!-- To be added -->
-
----
-
-_This fan project is not affiliated with or endorsed by Toby Fox or 8-4, Ltd. Deltarune is the property of Toby Fox._  
-_Last updated: [v1.0.0](../updates/v1-0-0.md)_

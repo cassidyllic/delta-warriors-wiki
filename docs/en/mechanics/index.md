@@ -3,18 +3,13 @@ icon: material/book-open-page-variant
 title: Game Mechanics
 ---
 
-[Game Mechanics](index.md){ .page-tag }
+[Game Mechanics](index.md){ .tag }
 
 # Game Mechanics
 
 ## List of Game Mechanics
 
-- [:material-folder-open: The Survey Program](introduction.md)
-- [:material-dice-5: Rarities](rarities.md)
-- [:material-cards-playing: Dark Fountains](fountains.md)
-- [:material-chess-knight: Experience Points](exp.md)
-- [:material-tree: Upgrades](growth.md)
-
----
-
-_Last updated: [v1.0.0](../updates/v1-0-0.md)_
+- [:material-sword-cross: Basic Combat and Abilities](combat.md)
+- [:material-dice-5: Rarities and Archetypes](rarities.md)
+- [:material-cards-playing: Gacha System and Dark Fountains](fountains.md)
+- [:material-chess-knight: Experience and Upgrading](exp.md)

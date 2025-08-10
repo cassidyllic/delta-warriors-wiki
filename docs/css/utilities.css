@@ -65,41 +65,7 @@ li.invisible {
   list-style: none !important;
 }
 
-/* Hover */
-.hover {
-  cursor: help;
-  position: relative;
-}
-
-.hover::after {
-  background: var(--md-code-bg-color);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  clip-path: none;
-  color: var(--md-code-fg-color);
-  content: attr(hover);
-  font-size: 0.5rem;
-  left: 50%;
-  opacity: 0;
-  overflow: visible;
-  padding: 6px 10px;
-  pointer-events: none;
-  position: absolute;
-  top: 125%;
-  transform: translateX(-50%) scale(0.8);
-  transform-origin: top center;
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-  white-space: nowrap;
-  z-index: 10;
-}
-
-.hover:hover::after {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(-50%) scale(1);
-}
-
-/* Float & Attributes */
+/* Attributes */
 .upside-down {
   display: inline-block;
   transform: rotate(180deg);
@@ -107,6 +73,15 @@ li.invisible {
   --float-direction: -1;
 }
 
+.big {
+  font-size: 2em;
+}
+
+.big.keys {
+  font-size: 1.4em;
+}
+
+/* Float animation */
 .float {
   animation: float var(--float-duration) ease-in-out infinite;
 }
