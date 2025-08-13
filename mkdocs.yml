@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 # Site Information
-site_author: Cassidyllic
+site_author: Cassidyllic, Osaka, and Ren
 site_description: A comprehensive wiki for Delta Warriors
 site_name: Delta Warriors Wiki
 site_url: https://cassidyllic.github.io/delta-warriors-wiki
 
-copyright: Deltarune &copy; by Toby Fox | Delta Warriors by Idyll Works - Wiki is Open Source
+copyright: Deltarune &copy; by Toby Fox | Delta Warriors by Idyll Works - This wiki is an open source project under the GNU GPL v3 license.
 
 # Extra Configuration
 extra:
@@ -27,6 +27,7 @@ extra_css:
 
 # Extensions & Plugins
 markdown_extensions:
+  - abbr
   - admonition
   - attr_list
   - footnotes
@@ -56,24 +57,32 @@ plugins:
           default: true
           name: English
           build: true
+
         - locale: fr
-          name: Français
           build: false
+          copyright: Deltarune&copy;, Toby Fox | Delta Warriors, Idyll Works - Ce wiki est un projet open source sous licence GNU GPL v3.
+          name: Français
           nav_translations:
             Home: Accueil
-            Mechanics: Mécaniques
-            Soul Traits: Âmes
-            Equipment: Équipement
-            Weapons: Armes
-            Accessories: Accessoires
-            Locations: Lieux
-            NPCs: PNJs
+            Credits: Crédits
+            Updates: Mises à jour
+          site_name: Wiki Delta Warriors
+
         - locale: ja
-          name: 日本語
           build: false
+          copyright: 『DELTARUNE&copy;』Toby Fox | 『デルタウォリアーズ』 Idyll Works制作 - Wikiはオープンソースです
+          name: 日本語
+          nav_translations:
+            Home: ホームページ
+            Credits: クレジット
+            Updates: アップデート
+          site_name: デルタウォリアーズ Wiki
+
+        # To be added.
         - locale: pt-BR
           name: Português Brasileiro
           build: false
+
   - macros
   - meta
   - search
@@ -88,10 +97,10 @@ nav:
           # - 1.0.0: updates/v1-0-0.md
   - Mechanics:
       - mechanics/index.md
-      - Basic Combat: mechanics/combat.md
-      - Dark Fountains: mechanics/fountains.md
-      - Exp and Upgrading: mechanics/exp.md
-      - Rarities: mechanics/rarities.md
+      - Combat System: mechanics/combat.md
+      - Gacha System: mechanics/fountains.md
+      - EXP System: mechanics/exp.md
+      - Rarity System: mechanics/rarities.md
   # - Soul Traits:
   #     - souls/index.md
   #     - Bravery: souls/bravery.md
@@ -126,7 +135,7 @@ theme:
   font:
     text: Raleway
   icon:
-    annotation: material/image
+    annotation: material/information
   name: material
   palette:
     accent: custom

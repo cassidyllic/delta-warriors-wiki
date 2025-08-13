@@ -1,14 +1,16 @@
 ---
+description: In-depth breakdown of Delta Warriors' combat system.
 icon: material/sword-cross
+subtitle: and Mastery System
 ---
 
 [Game Mechanics](index.md){ .tag }
 
-# Basic Combat
+# Basic Combat and Mastery
 
 ## Overview
 
-While each [Soul Trait](#) have their own playstyle and techniques, there are certain things to explain that are universal to everyone.
+While each [Soul Trait](#) has their own playstyle and techniques, there are certain things to explain that are universal to everyone.
 
 True to its spiritual godfather, **Delta Warriors**' combat is heavily inspired by **Like a Dragon**.
 
@@ -22,7 +24,7 @@ True to its spiritual godfather, **Delta Warriors**' combat is heavily inspired 
 | :--------------------------------: | :----------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |         **Toggle Sprint**          |                       ++lctrl++                        |                                                   :gamepad-xbox-ls:{ .big }                                                    |                                                              :gamepad-playstation-l3:{ .big }                                                              |
 |  **Light Attack<br/>Rush Combo**   |              :gamepad-mouse-left:{ .big }              |                                                    :gamepad-xbox-x:{ .big }                                                    |                                                            :gamepad-playstation-square:{ .big }                                                            |
-| **Heavy Attack<br/>Finshing Blow** |                     ++r++{ .big }                      |                                                    :gamepad-xbox-y:{ .big }                                                    |                                                           :gamepad-playstation-triangle:{ .big }                                                           |
+| **Heavy Attack<br/>Finishing Blow** |                     ++r++{ .big }                      |                                                    :gamepad-xbox-y:{ .big }                                                    |                                                           :gamepad-playstation-triangle:{ .big }                                                           |
 |       **Quickstep<br/>Jump**       |              ++q++{ .big }<br/>++space++               |                                                    :gamepad-xbox-a:{ .big }                                                    |                                                            :gamepad-playstation-cross:{ .big }                                                             |
 |         **Context Normal**         |                     ++x++{ .big }                      |                                                    :gamepad-xbox-b:{ .big }                                                    |                                                            :gamepad-playstation-circle:{ .big }                                                            |
 |             **Guard**              |                     ++f++{ .big }                      |                                                   :gamepad-xbox-lb:{ .big }                                                    |                                                              :gamepad-playstation-l1:{ .big }                                                              |
@@ -92,8 +94,9 @@ Both your **Supers** and your **Ultimate** become stronger as you use them. Most
 There are 3 upgrade speed groups — Early, Average, and Late.
 
 !!! info inline end "Numbers are absolute"
-    Numbers are absolute, not cummulative.  
-    
+
+    Numbers are absolute, not cumulative.
+
     e.g., For an Ultimate in the **Late** group, it will only take 200 uses to reach Level 5, instead of adding up all the previous requirements.
 
 |           | **Early** | **Average** | **Late** |
@@ -112,18 +115,33 @@ There are 3 upgrade speed groups — Early, Average, and Late.
 
 Some elements don’t follow the standard rules and instead have unique effects — these are called **Special** Elements.
 
-|             **Element**              | {{ center("**Special Effect**") }}                                                              |
-| :----------------------------------: | ----------------------------------------------------------------------------------------------- |
-| <span class="badge rude">rude</span> | Deals super-effective damage to anyone who can deal super-effective damage to the user.         |
-| <span class="badge star">star</span> | Always deals super-effective damage, increasing its multiplier to ×4 instead of the usual ×1.2. |
+|             **Element**              | **Special Effects**                                                                              |
+| :----------------------------------: | ------------------------------------------------------------------------------------------------ |
+| <span class="badge rude">rude</span> | Deals super-effective damage to anyone who can deal super-effective damage to the user.          |
+| <span class="badge star">star</span> | Always deals super-effective damage. Super-effective multiplier is ×4 instead of the usual ×1.2. |
 
 ### Elemental Statuses
 
 Repeatedly getting hit by an attack of a certain element will cause an increasing risk of getting hit by a special status effect.
 
-|                 **Element**                  | **Status** | {{ center("**Effect**") }}                                                                                       |
-| :------------------------------------------: | :--------: | ---------------------------------------------------------------------------------------------------------------- |
-| <span class="badge electric">electric</span> | Paralysed  | The enemy is shocked, this is similar to **stunned** except they cannot use evasives.                            |
-|     <span class="badge fire">fire</span>     |  Burning   | The enemy is set on fire, taking DOT for a few seconds. Fire can be put out with specific actions or techniques. |
-|      <span class="badge ice">ice</span>      | Frostbite  | The enemy is freezing, gaining less TP and moving slower. Frostbite can be healed with specific techniques.      |
-|     <span class="badge star">star</span>     |  Swooned   | The enemy is utterly incapacitated.                                                                              |
+|               |                 **Element**                  | **Effect**                                                                                                       |
+| :-----------: | :------------------------------------------: | ---------------------------------------------------------------------------------------------------------------- |
+| **Paralysis** | <span class="badge electric">electric</span> | The enemy is shocked, this is similar to **stunned** except they cannot use evasives.                            |
+|   **Burn**    |     <span class="badge fire">fire</span>     | The enemy is set on fire, taking DOT for a few seconds. Fire can be put out with specific actions or techniques. |
+| **Frostbite** |      <span class="badge ice">ice</span>      | The enemy is freezing, gaining less TP and moving slower. Frostbite can be healed with specific techniques.      |
+
+## Defeat Mechanics
+
+When your health or an enemy’s health reaches zero, the outcome depends on the type of attack and who performed it. The attack type is defined by two factors: whether the attack is **Fatal**, and which **Element** is the attack.
+
+If an NPC incapacitates you with a Default attack type, you will enter the **Downed** state for 15 seconds. While downed, you cannot move or take any actions, but your allies can heal you to get you back on your feet immediately.
+
+Some enemies will spare you when you are downed, while others will attempt to finish you off — your allies can intervene to prevent this.
+
+|            |           **Attack Type**            |           **Outcome**           |                       **Kill?**                       |
+| :--------: | :----------------------------------: | :-----------------------------: | :---------------------------------------------------: |
+|  **Rout**  |               Default                |        Victim runs away         |     :material-close-box:{ title="Doesn't kill" }      |
+|  **Down**  |       Default (from NPC only)        |   Victim falls on the ground    |   :material-close-box:{ title="You bit the dust" }    |
+|  **Kill**  |                Fatal                 |  Victim turns into a red mist   |      :material-checkbox-marked:{ title="Kill" }       |
+| **Freeze** |  <span class="badge ice">ice</span>  |        Victim is frozen         | :material-checkbox-marked:{ title="Kill and Freeze" } |
+| **Swoon**  | <span class="badge star">star</span> | Victim is utterly incapacitated |     :material-close-box:{ title="Doesn't Kill" }      |

@@ -6,17 +6,22 @@ icon: material/home
 
 ## Introduction
 
-Delta Warriors is a 3D fighter with Open-World and Gacha elements based on Deltarune. It was developed by Idyll Works and is inspired by **Like a Dragon**.
+**Delta Warriors** is a 3D fighter with Open-World and Gacha elements based on **Deltarune**. It was developed by Idyll Works and is inspired by **Like a Dragon**.
 
 ## Getting Started
 
 New to Delta Warriors? These articles will help you get started with the basics:
 
-- To be added...
+- [:material-sword-cross: Basic Combat and Mastery](./mechanics/combat.md) — Learn how basic combat and its oddities work.
+- [:material-cards-playing: Gacha through Dark Fountains](./mechanics/fountains.md) — Learn how to draw a Soul from the gacha system.
+- [:material-chess-knight: Experience and Upgrading](./mechanics/exp.md) — Learn how to unlock techniques and enhancements.
+
+[:octicons-arrow-right-24: View all Game Mechanics pages](./mechanics/index.md)
 
 ## Community Links
 
-??? info "Important links are on every page!"
+!!! info inline end "Important links are on every page!"
+
     You can find important links in the footer of every page, including the Roblox game page, Discord server, and the official Deltarune website.
 
 Join our community to stay updated and connect with other players:
@@ -27,6 +32,10 @@ Join our community to stay updated and connect with other players:
 
 ---
 
-_Delta Warriors is a fan-made project and is not affiliated with Deltarune or Toby Fox._  
-_This wiki is open-source. Found an error? Let us know on Discord!_  
-_Wiki Version: 0.2.0-rc.1_
+<div style="font-size: 75%; opacity: 0.7;" markdown>
+
+Delta Warriors is a fan-made project and is not affiliated with Deltarune or Toby Fox.  
+This wiki is open-source. Found an error? Let us know on Discord!  
+0.3.0-rc.1
+
+</div>

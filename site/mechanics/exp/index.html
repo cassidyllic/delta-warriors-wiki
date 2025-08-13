@@ -6,10 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive wiki for Delta Warriors">
+        <meta name="description" content="In-depth breakdown of experience and upgrading systems.">
       
       
-        <meta name="author" content="Cassidyllic">
+        <meta name="author" content="Cassidyllic, Osaka, and Ren">
       
       
         <link rel="canonical" href="https://cassidyllic.github.io/delta-warriors-wiki/mechanics/exp/">
@@ -18,15 +18,15 @@
         <link rel="prev" href="../fountains/">
       
       
-        <link rel="next" href="../growth/">
+        <link rel="next" href="../rarities/">
       
       
-      <link rel="icon" href="../../_assets/img/deltarune.svg">
+      <link rel="icon" href="../../assets/img/deltarune.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Experience - Delta Warriors Wiki</title>
+        <title>EXP System - Delta Warriors Wiki</title>
       
     
     
@@ -36,6 +36,12 @@
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M13%209h-2V7h2m0%2010h-2v-6h2m-1-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
 
 
     
@@ -47,18 +53,16 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mozilla+Text:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Mozilla Text";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Raleway";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../_extras/css/base.css">
+      <link rel="stylesheet" href="../../css/components.css">
     
-      <link rel="stylesheet" href="../../_extras/css/components.css">
+      <link rel="stylesheet" href="../../css/stylesheet.css">
     
-      <link rel="stylesheet" href="../../_extras/css/dynamic-themes.css">
-    
-      <link rel="stylesheet" href="../../_extras/css/utilities.css">
+      <link rel="stylesheet" href="../../css/utilities.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -72,12 +76,10 @@
   
     
     
-      
     
     
     
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -86,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#experience-points" class="md-skip">
+        <a href="#experience-and-upgrading" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Experience
+              EXP System
             
           </span>
         </div>
@@ -128,33 +130,7 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
-  
     
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Dark Mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -263,102 +239,6 @@
     
   
   Mechanics
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../souls/" class="md-tabs__link">
-          
-  
-  
-    
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 20c-6.6-6.1-10-9.2-10-12.9C3.5 4 5.9 1.6 9 1.6c1.7 0 3.4.8 4.5 2.1 1.1-1.3 2.8-2.1 4.5-2.1 3.1 0 5.5 2.4 5.5 5.5 0 3.8-3.4 6.9-10 12.9M12 21.1C5.4 15.2 1.5 11.7 1.5 7v-.6c-.6.9-1 2-1 3.2 0 3.8 3.4 6.9 10 12.8z"/></svg>
-    
-  
-  Soul Traits
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../equipment/" class="md-tabs__link">
-          
-  
-  
-    
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 4h14a3 3 0 0 1 3 3v4h-7v-1H9v1H2V7a3 3 0 0 1 3-3m6 7h2v2h-2zm-9 1h7v1l2 2h2l2-2v-1h7v8H2z"/></svg>
-    
-  
-  Equipment
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../locations/" class="md-tabs__link">
-          
-  
-  
-    
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15 19-6-2.11V5l6 2.11M20.5 3h-.16L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5a.5.5 0 0 0 .5.5c.05 0 .11 0 .16-.03L9 18.9l6 2.1 5.64-1.9c.21-.1.36-.25.36-.48V3.5a.5.5 0 0 0-.5-.5"/></svg>
-    
-  
-  Locations
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../npcs/" class="md-tabs__link">
-          
-  
-  
-    
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
-    
-  
-  NPCs
 
         </a>
       </li>
@@ -501,8 +381,6 @@
           
         
       
-        
-      
     
     
     
@@ -534,11 +412,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
@@ -548,31 +421,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../updates/v1-0-0/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg>
-  
-  <span class="md-ellipsis">
-    1.0.0
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -603,8 +451,6 @@
       
         
           
-        
-      
         
       
         
@@ -672,39 +518,17 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../combat/" class="md-nav__link">
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 20H4a2 2 0 0 1-2-2V6c0-1.11.89-2 2-2h6l2 2h7a2 2 0 0 1 2 2H4v10l2.14-8h17.07l-2.28 8.5c-.23.87-1.01 1.5-1.93 1.5"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m6.2 2.44 11.9 11.9 2.12-2.12 1.41 1.41-2.47 2.47 3.18 3.18c.39.39.39 1.02 0 1.41l-.71.71a.996.996 0 0 1-1.41 0L17 18.23l-2.44 2.47-1.41-1.41 2.12-2.12-11.9-11.9V2.44zM15.89 10l4.74-4.74V2.44H17.8l-4.74 4.74zm-4.95 5-2.83-2.87-2.21 2.21-2.12-2.12-1.41 1.41 2.47 2.47-3.18 3.19a.996.996 0 0 0 0 1.41l.71.71c.39.39 1.02.39 1.41 0L7 18.23l2.44 2.47 1.41-1.41-2.12-2.12z"/></svg>
   
   <span class="md-ellipsis">
-    The Survey
+    Combat System
     
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../rarities/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m-5 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m-5 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg>
-  
-  <span class="md-ellipsis">
-    Rarities
+      <br>
+      <small>and Mastery System</small>
     
   </span>
   
@@ -729,9 +553,19 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.7 2.2h1.5c1.1 0 2 .9 2 2v6.4zm5.4 1.6 1.3.6c1 .4 1.5 1.6 1.1 2.6l-2.4 5.9zM18 15.5l-5-12c-.3-.8-1-1.2-1.8-1.2-.3 0-.5.1-.8.2L3 5.5C2 5.9 1.5 7 2 8l5 12c.3.8 1 1.2 1.8 1.2.3 0 .5 0 .8-.2l7.4-3c.8-.3 1.2-1 1.2-1.8-.1-.2-.1-.5-.2-.7m-6.6-.5-3.2-2.4.4-4 3.2 2.4z"/></svg>
   
   <span class="md-ellipsis">
-    Fountains
+    Gacha System
+    
+      <br>
+      <small>through Dark Fountains</small>
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new"></span>
+  
+
   
 
       </a>
@@ -756,6 +590,31 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM13 2c-1.25 0-2.42.62-3.11 1.66L7 8l2 2 2.06-1.37c.44-.31 1.08-.19 1.39.27.02.03.05.06.05.1.3.59.19 1.3-.28 1.77l-4.8 4.8c-.55.56-.55 1.46.01 2.01.26.26.62.42.99.42H17V6a4 4 0 0 0-4-4"/></svg>
+  
+  <span class="md-ellipsis">
+    EXP System
+    
+      <br>
+      <small>and Upgrading System</small>
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -763,12 +622,68 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM13 2c-1.25 0-2.42.62-3.11 1.66L7 8l2 2 2.06-1.37c.44-.31 1.08-.19 1.39.27.02.03.05.06.05.1.3.59.19 1.3-.28 1.77l-4.8 4.8c-.55.56-.55 1.46.01 2.01.26.26.62.42.99.42H17V6a4 4 0 0 0-4-4"/></svg>
   
   <span class="md-ellipsis">
-    Experience
+    EXP System
+    
+      <br>
+      <small>and Upgrading System</small>
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--new"></span>
+  
+
+  
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skill-books" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill Books
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -782,540 +697,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../growth/" class="md-nav__link">
+      <a href="../rarities/" class="md-nav__link">
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 21v-4.26c-.47.17-.97.26-1.5.26C7 17 5 15 5 12.5c0-1.27.5-2.41 1.36-3.23C6.13 8.73 6 8.13 6 7.5 6 5 8 3 10.5 3c1.56 0 2.94.8 3.75 2h.25a5.5 5.5 0 0 1 5.5 5.5 5.5 5.5 0 0 1-5.5 5.5q-.75 0-1.5-.21V21z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m-5 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m-5 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg>
   
   <span class="md-ellipsis">
-    Upgrades
+    Rarity System
+    
+      <br>
+      <small>and Archetypes</small>
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new"></span>
+  
+
   
 
       </a>
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../souls/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 20c-6.6-6.1-10-9.2-10-12.9C3.5 4 5.9 1.6 9 1.6c1.7 0 3.4.8 4.5 2.1 1.1-1.3 2.8-2.1 4.5-2.1 3.1 0 5.5 2.4 5.5 5.5 0 3.8-3.4 6.9-10 12.9M12 21.1C5.4 15.2 1.5 11.7 1.5 7v-.6c-.6.9-1 2-1 3.2 0 3.8 3.4 6.9 10 12.8z"/></svg>
-  
-  <span class="md-ellipsis">
-    Soul Traits
-    
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Soul Traits
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../equipment/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 4h14a3 3 0 0 1 3 3v4h-7v-1H9v1H2V7a3 3 0 0 1 3-3m6 7h2v2h-2zm-9 1h7v1l2 2h2l2-2v-1h7v8H2z"/></svg>
-  
-  <span class="md-ellipsis">
-    Equipment
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Equipment
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../equipment/weapons/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.92 5H5l9 9 1-.94m4.96 6.06-.84.84a.996.996 0 0 1-1.41 0l-3.12-3.12-2.68 2.66-1.41-1.41 1.42-1.42L3 7.75V3h4.75l8.92 8.92 1.42-1.42 1.41 1.41-2.67 2.67 3.12 3.12c.4.4.4 1.03.01 1.42"/></svg>
-  
-  <span class="md-ellipsis">
-    Weapons
-    
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2">
-            <span class="md-nav__icon md-icon"></span>
-            Weapons
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../equipment/accessories/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5z"/></svg>
-  
-  <span class="md-ellipsis">
-    Accessories
-    
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
-            <span class="md-nav__icon md-icon"></span>
-            Accessories
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../locations/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15 19-6-2.11V5l6 2.11M20.5 3h-.16L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5a.5.5 0 0 0 .5.5c.05 0 .11 0 .16-.03L9 18.9l6 2.1 5.64-1.9c.21-.1.36-.25.36-.48V3.5a.5.5 0 0 0-.5-.5"/></svg>
-  
-  <span class="md-ellipsis">
-    Locations
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Locations
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../locations/hometown/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 21v-4.26c-.47.17-.97.26-1.5.26C7 17 5 15 5 12.5c0-1.27.5-2.41 1.36-3.23C6.13 8.73 6 8.13 6 7.5 6 5 8 3 10.5 3c1.56 0 2.94.8 3.75 2h.25a5.5 5.5 0 0 1 5.5 5.5 5.5 5.5 0 0 1-5.5 5.5q-.75 0-1.5-.21V21z"/></svg>
-  
-  <span class="md-ellipsis">
-    Hometown
-    
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
-            <span class="md-nav__icon md-icon"></span>
-            Hometown
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../locations/closet-world/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4v15c0 1.1.9 2 2 2v1h2v-1h3.5V2H6c-1.1 0-2 .9-2 2m4 6h2v3H8zm10-8h-5.5v19H16v1h2v-1c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-2 11h-2v-3h2z"/></svg>
-  
-  <span class="md-ellipsis">
-    Closet Dark World
-    
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_3">
-            <span class="md-nav__icon md-icon"></span>
-            Closet Dark World
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../npcs/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
-  
-  <span class="md-ellipsis">
-    NPCs
-    
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            NPCs
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
             
           </ul>
@@ -1345,6 +752,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skill-books" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill Books
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1359,8 +801,175 @@
 
 
 
-<p><a class="page-tag" href="../">Game Mechanics</a></p>
-<h1 id="experience-points">Experience Points</h1>
+<p><a class="tag" href="../">Game Mechanics</a></p>
+<h1 id="experience-and-upgrading">Experience and Upgrading</h1>
+<h2 id="overview">Overview</h2>
+<p class="annotate">As you play the game, you’ll earn <strong>three distinct types of experience</strong> (1) (Also called <strong><abbr title="Stat Points">SP</abbr></strong>), each represented by a different colour. These points can be used to <strong>enhance</strong> your base stats or <strong>unlock</strong> new techniques.</p>
+<ol>
+<li>
+<ul>
+<li><span class="endurance"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v2H5zM17 2v3h-2V2h-2v3h-2V2H9v3H7V2H5v6h2v10h10V8h2V2z"/></svg></span> Endurance</span> — Also known as <strong><abbr title="Endurance Stat Points">ESP</abbr></strong>.</li>
+<li><span class="strength"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM13 2c-1.25 0-2.42.62-3.11 1.66L7 8l2 2 2.06-1.37c.44-.31 1.08-.19 1.39.27.02.03.05.06.05.1.3.59.19 1.3-.28 1.77l-4.8 4.8c-.55.56-.55 1.46.01 2.01.26.26.62.42.99.42H17V6a4 4 0 0 0-4-4"/></svg></span> Strength</span> — Also known as <strong><abbr title="Strength Stat Points">SSP</abbr></strong>.</li>
+<li><span class="technique"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM17.16 8.26A8.94 8.94 0 0 1 19 13c0 2.76-3.13 5-7 5s-7-2.24-7-5c0-2.38 2.33-6.61 5.46-7.73-.3-.36-.46-.81-.46-1.27a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 .46-.16.91-.46 1.27.86.33 1.64.83 2.3 1.47l-4.55 4.55 1.42 1.42z"/></svg></span> Technique</span> — Also known as <strong><abbr title="Technique Stat Points">TSP</abbr></strong>.</li>
+</ul>
+</li>
+</ol>
+<p>You’ll earn experience through: combat, completing quests, earning trophies …and nearly any other activity in the game.</p>
+<hr />
+<h2 id="upgrading">Upgrading</h2>
+<p>You can spend your Stat Points to improve your character through <strong>three separate upgrade trees</strong>. As there is no level system or cap on Stat Points, you will ultimately be able to unlock all upgrades.</p>
+<p>When switching to a different <a href="#">Soul Trait</a>, your <strong>Soul</strong> and <strong>Technique</strong> trees will be reset. However, your upgrades are saved, so if you return to a previous Soul Trait, you won’t have to re-grind them.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Body Tree</label><label for="__tabbed_1_2">Soul Tree</label><label for="__tabbed_1_3">Technique Tree</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The <strong>Body Tree</strong> contains <strong>universal</strong> upgrades that are shared by all Soul Traits.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th style="text-align: center;"><strong>Cost</strong></th>
+<th><strong>Prerequisite(s)</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boost Health I</td>
+<td style="text-align: center;"><span class="endurance title" title="Costs 900 Endurance"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v2H5zM17 2v3h-2V2h-2v3h-2V2H9v3H7V2H5v6h2v10h10V8h2V2z"/></svg></span> 900</span></td>
+<td></td>
+<td>Increases base health.</td>
+</tr>
+<tr>
+<td>Boost Health II</td>
+<td style="text-align: center;"><span class="endurance title" title="Costs 2700 Endurance"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v2H5zM17 2v3h-2V2h-2v3h-2V2H9v3H7V2H5v6h2v10h10V8h2V2z"/></svg></span> 2700</span></td>
+<td>Prior</td>
+<td>Increases base health even further.</td>
+</tr>
+<tr>
+<td>Boost Health III</td>
+<td style="text-align: center;"><span class="endurance title" title="Costs 5400 Endurance"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v2H5zM17 2v3h-2V2h-2v3h-2V2H9v3H7V2H5v6h2v10h10V8h2V2z"/></svg></span> 5400</span></td>
+<td>Prior</td>
+<td>Increases base health to its maximum potential.</td>
+</tr>
+<tr>
+<td>Boost Health MAX</td>
+<td style="text-align: center;"><span class="endurance title" title="Costs 10800 Endurance"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v2H5zM17 2v3h-2V2h-2v3h-2V2H9v3H7V2H5v6h2v10h10V8h2V2z"/></svg></span> 10800</span></td>
+<td>Prior<br/>Limit Breaker</td>
+<td>Increases base health beyond its maximum potential.</td>
+</tr>
+<tr>
+<td>Boost Attack I</td>
+<td style="text-align: center;"><span class="strength title" title="Costs 2000 Strength"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM13 2c-1.25 0-2.42.62-3.11 1.66L7 8l2 2 2.06-1.37c.44-.31 1.08-.19 1.39.27.02.03.05.06.05.1.3.59.19 1.3-.28 1.77l-4.8 4.8c-.55.56-.55 1.46.01 2.01.26.26.62.42.99.42H17V6a4 4 0 0 0-4-4"/></svg></span> 2000</span></td>
+<td></td>
+<td>Increase attack power.</td>
+</tr>
+<tr>
+<td>Boost Attack II</td>
+<td style="text-align: center;"><span class="strength title" title="Costs 6000 Strength"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM13 2c-1.25 0-2.42.62-3.11 1.66L7 8l2 2 2.06-1.37c.44-.31 1.08-.19 1.39.27.02.03.05.06.05.1.3.59.19 1.3-.28 1.77l-4.8 4.8c-.55.56-.55 1.46.01 2.01.26.26.62.42.99.42H17V6a4 4 0 0 0-4-4"/></svg></span> 6000</span></td>
+<td>Prior</td>
+<td>Increase attack power even further.</td>
+</tr>
+<tr>
+<td>Boost Attack III</td>
+<td style="text-align: center;"><span class="strength title" title="Costs 12000 Strength"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM13 2c-1.25 0-2.42.62-3.11 1.66L7 8l2 2 2.06-1.37c.44-.31 1.08-.19 1.39.27.02.03.05.06.05.1.3.59.19 1.3-.28 1.77l-4.8 4.8c-.55.56-.55 1.46.01 2.01.26.26.62.42.99.42H17V6a4 4 0 0 0-4-4"/></svg></span> 12000</span></td>
+<td>Prior</td>
+<td>Increases attack power to its maximum potential.</td>
+</tr>
+<tr>
+<td>Boost Attack MAX</td>
+<td style="text-align: center;"><span class="strength title" title="Costs 18000 Strength"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM13 2c-1.25 0-2.42.62-3.11 1.66L7 8l2 2 2.06-1.37c.44-.31 1.08-.19 1.39.27.02.03.05.06.05.1.3.59.19 1.3-.28 1.77l-4.8 4.8c-.55.56-.55 1.46.01 2.01.26.26.62.42.99.42H17V6a4 4 0 0 0-4-4"/></svg></span> 18000</span></td>
+<td>Prior<br/>Limit Breaker</td>
+<td>Increase attack power beyond its maximum potential.</td>
+</tr>
+<tr>
+<td>Boost <abbr title="Tension Points">TP</abbr> I</td>
+<td style="text-align: center;"><span class="technique title" title="Costs 1000 Technique"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM17.16 8.26A8.94 8.94 0 0 1 19 13c0 2.76-3.13 5-7 5s-7-2.24-7-5c0-2.38 2.33-6.61 5.46-7.73-.3-.36-.46-.81-.46-1.27a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 .46-.16.91-.46 1.27.86.33 1.64.83 2.3 1.47l-4.55 4.55 1.42 1.42z"/></svg></span> 1000</span></td>
+<td><a href="#">Ralsei's Manual</a></td>
+<td>Tension builds faster when fighting.</td>
+</tr>
+<tr>
+<td>Boost <abbr title="Tension Points">TP</abbr> II</td>
+<td style="text-align: center;"><span class="technique title" title="Costs 2000 Technique"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM17.16 8.26A8.94 8.94 0 0 1 19 13c0 2.76-3.13 5-7 5s-7-2.24-7-5c0-2.38 2.33-6.61 5.46-7.73-.3-.36-.46-.81-.46-1.27a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 .46-.16.91-.46 1.27.86.33 1.64.83 2.3 1.47l-4.55 4.55 1.42 1.42z"/></svg></span> 2000</span></td>
+<td>Prior</td>
+<td>Tension builds even faster when fighting.</td>
+</tr>
+<tr>
+<td>Boost <abbr title="Tension Points">TP</abbr> III</td>
+<td style="text-align: center;"><span class="technique title" title="Costs 6000 Technique"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM17.16 8.26A8.94 8.94 0 0 1 19 13c0 2.76-3.13 5-7 5s-7-2.24-7-5c0-2.38 2.33-6.61 5.46-7.73-.3-.36-.46-.81-.46-1.27a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 .46-.16.91-.46 1.27.86.33 1.64.83 2.3 1.47l-4.55 4.55 1.42 1.42z"/></svg></span> 6000</span></td>
+<td>Prior</td>
+<td>Tension builds to its maximum speed when fighting.</td>
+</tr>
+<tr>
+<td>Boost <abbr title="Tension Points">TP</abbr> MAX</td>
+<td style="text-align: center;"><span class="technique title" title="Costs 12000 Technique"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM17.16 8.26A8.94 8.94 0 0 1 19 13c0 2.76-3.13 5-7 5s-7-2.24-7-5c0-2.38 2.33-6.61 5.46-7.73-.3-.36-.46-.81-.46-1.27a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 .46-.16.91-.46 1.27.86.33 1.64.83 2.3 1.47l-4.55 4.55 1.42 1.42z"/></svg></span> 12000</span></td>
+<td>Prior<br/>Limit Breaker</td>
+<td>Tension builds beyond its maximum speed when fighting.</td>
+</tr>
+<tr>
+<td>Limit Breaker</td>
+<td style="text-align: center;"><span class="endurance title" title="Costs 8000 Endurance"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v2H5zM17 2v3h-2V2h-2v3h-2V2H9v3H7V2H5v6h2v10h10V8h2V2z"/></svg></span> 8000</span><br/><span class="strength title" title="Costs 8000 Strength"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM13 2c-1.25 0-2.42.62-3.11 1.66L7 8l2 2 2.06-1.37c.44-.31 1.08-.19 1.39.27.02.03.05.06.05.1.3.59.19 1.3-.28 1.77l-4.8 4.8c-.55.56-.55 1.46.01 2.01.26.26.62.42.99.42H17V6a4 4 0 0 0-4-4"/></svg></span> 8000</span><br/><span class="technique title" title="Costs 8000 Technique"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM17.16 8.26A8.94 8.94 0 0 1 19 13c0 2.76-3.13 5-7 5s-7-2.24-7-5c0-2.38 2.33-6.61 5.46-7.73-.3-.36-.46-.81-.46-1.27a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 .46-.16.91-.46 1.27.86.33 1.64.83 2.3 1.47l-4.55 4.55 1.42 1.42z"/></svg></span> 8000</span></td>
+<td>Boost Health III<br/>Boost Attack III<br/>Boost <abbr title="Tension Points">TP</abbr> III</td>
+<td>Push past limit to become even stronger.</td>
+</tr>
+<tr>
+<td>Quick Learner</td>
+<td style="text-align: center;"><span class="technique title" title="Costs 1000 Technique"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM17.16 8.26A8.94 8.94 0 0 1 19 13c0 2.76-3.13 5-7 5s-7-2.24-7-5c0-2.38 2.33-6.61 5.46-7.73-.3-.36-.46-.81-.46-1.27a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 .46-.16.91-.46 1.27.86.33 1.64.83 2.3 1.47l-4.55 4.55 1.42 1.42z"/></svg></span> 1000</span></td>
+<td><a href="#">Ralsei's Manual</a></td>
+<td>Gain 10% more EXP from fights.</td>
+</tr>
+<tr>
+<td>Enlightened Learner</td>
+<td style="text-align: center;"><span class="technique title" title="Costs 5000 Technique"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM17.16 8.26A8.94 8.94 0 0 1 19 13c0 2.76-3.13 5-7 5s-7-2.24-7-5c0-2.38 2.33-6.61 5.46-7.73-.3-.36-.46-.81-.46-1.27a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 .46-.16.91-.46 1.27.86.33 1.64.83 2.3 1.47l-4.55 4.55 1.42 1.42z"/></svg></span> 5000</span></td>
+<td>Prior<br/><a href="#">Berdly's Notebook</a></td>
+<td>Gain 20% more EXP from fights.</td>
+</tr>
+<tr>
+<td>Prodigious Learner</td>
+<td style="text-align: center;"><span class="technique title" title="Costs 10000 Technique"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22H5v-2h14zM17.16 8.26A8.94 8.94 0 0 1 19 13c0 2.76-3.13 5-7 5s-7-2.24-7-5c0-2.38 2.33-6.61 5.46-7.73-.3-.36-.46-.81-.46-1.27a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 .46-.16.91-.46 1.27.86.33 1.64.83 2.3 1.47l-4.55 4.55 1.42 1.42z"/></svg></span> 10000</span></td>
+<td>Prior<br/><a href="#">Noelle's Diary</a></td>
+<td>Gain 30% more EXP from fights.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p>Your <strong>Soul Tree</strong> contains <strong>specific</strong> enhancements and upgrades. Its content depends on your Soul Trait.</p>
+<p><a href="#"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> View all Soul Traits.</a></p>
+</div>
+<div class="tabbed-block">
+<p>Your <strong>Technique Tree</strong> contains <strong>specific</strong> abilities and their direct upgrades. Its content depends on your Soul Trait.</p>
+<p><a href="#"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> View all Soul Traits.</a></p>
+</div>
+</div>
+</div>
+<h2 id="skill-books">Skill Books</h2>
+<p><strong>Skill Books</strong> are items you collect that enable you to purchase previously locked techniques or upgrades. They can be found in various locations and obtained through different methods. Some are rewards for completing quests, others are available from the start and some drop from bosses.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Book</strong></th>
+<th><strong>Location</strong></th>
+<th style="text-align: center;"><strong>Unlocks</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Ralsei's Manual</td>
+<td>Given by Ralsei in <a href="#">Castle Town</a></td>
+<td style="text-align: center;">Quick Learner</td>
+</tr>
+<tr>
+<td style="text-align: center;">Berdly's Notebook</td>
+<td>Boss Drops from <a href="#">Berdly</a> (10%)</td>
+<td style="text-align: center;">Enlightened Learner</td>
+</tr>
+<tr>
+<td style="text-align: center;">Noelle's Diary</td>
+<td>Given as quest reward by <a href="#">Noelle</a></td>
+<td style="text-align: center;">Prodigious Learner</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1398,15 +1007,23 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-    <div class="md-copyright__highlight">
-      Deltarune &copy; by Toby Fox | Delta Warriors by Idyll Works - Wiki is Open Source
-    </div>
-  
-  
+  <div class="md-copyright__highlight">Deltarune &copy; by Toby Fox | Delta Warriors by Idyll Works - This wiki is an open source project under the GNU GPL v3 license.</div>
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
+  <a
+    href="https://squidfunk.github.io/mkdocs-material/"
+    target="_blank"
+    rel="noopener"
+  >
+    Material for MkDocs
+  </a>
+  and localized using the
+  <a
+    href="https://ultrabug.github.io/mkdocs-static-i18n/"
+    target="_blank"
+    rel="noopener"
+  >
+    MkDocs Static i18n Plugin
+  </a>
   
 </div>
       
@@ -1474,14 +1091,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.top", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.tooltips", "navigation.indexes", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.top", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
-      
-        <script src="../../_extras/js/dynamic-theme.js"></script>
-      
-        <script src="../../_extras/js/dynamic-svg.js"></script>
       
     
   </body>
