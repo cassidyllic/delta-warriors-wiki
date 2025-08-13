@@ -47,7 +47,10 @@ blockquote {
   margin-bottom: 0;
 }
 
-/* Force vertically centred alignment. */
+.md-typeset table th {
+  text-align: center !important;
+}
+
 td,
 th {
   vertical-align: middle !important;

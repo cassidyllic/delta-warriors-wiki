@@ -72,51 +72,6 @@
   white-space: nowrap;
 }
 
-/* Technique cards */
-.technique {
-  background: var(--md-code-bg-color);
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  height: 10em;
-  position: relative;
-}
-
-.technique img {
-  aspect-ratio: 16/9;
-  position: absolute;
-  right: 1em;
-  top: 50%;
-  transform: translateY(-50%);
-  height: calc(100% - 2em);
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
-  border: 1px solid var(--md-default-fg-color--lightest);
-}
-
-.technique-content {
-  position: absolute;
-  left: 1em;
-  top: 1em;
-  bottom: 3em;
-  right: calc(35% + 1em);
-  overflow: hidden;
-  color: var(--md-default-fg-color);
-}
-
-.technique-attributes {
-  position: absolute;
-  left: 1em;
-  top: calc(100% - 3em);
-  bottom: 1em;
-  right: calc(35% + 1em);
-  overflow: hidden;
-  color: var(--md-default-fg-color);
-  display: flex;
-  align-items: flex-end;
-}
-
 /* Rarity */
 /* Common (C) */
 .rarity-c {
