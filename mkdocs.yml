@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 # Site Information
 site_author: Cassidyllic, Osaka, and Ren
-site_description: A comprehensive wiki for Delta Warriors
+site_description: A comprehensive wiki for Delta Warriors.
 site_name: Delta Warriors Wiki
 site_url: https://cassidyllic.github.io/delta-warriors-wiki
 
@@ -16,14 +16,12 @@ extra:
     - icon: simple/robloxstudio
       link: https://www.roblox.com/communities/7344131/Idyll-Works#!/about
       name: Official Roblox community
-    - icon: custom/deltarune
+    - icon: brand/deltarune
       link: https://deltarune.com/
       name: Deltarune by Toby Fox
 
 extra_css:
-  - css/components.css
-  - css/stylesheet.css
-  - css/utilities.css
+  - content/css/stylesheet.css
 
 # Extensions & Plugins
 markdown_extensions:
@@ -39,7 +37,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       options:
         custom_icons:
-          - overrides/.icons
+          - theme/.icons
   - pymdownx.keys
   - pymdownx.superfences
   - pymdownx.snippets:
@@ -82,7 +80,6 @@ plugins:
         - locale: pt-BR
           name: Português Brasileiro
           build: false
-
   - macros
   - meta
   - search
@@ -91,16 +88,6 @@ plugins:
 nav:
   - Home:
       - index.md
-      - Credits: credit.md
-      - Updates:
-          - updates/index.md
-          # - 1.0.0: updates/v1-0-0.md
-  - Mechanics:
-      - mechanics/index.md
-      - Combat System: mechanics/combat.md
-      - Gacha System: mechanics/fountains.md
-      - EXP System: mechanics/exp.md
-      - Rarity System: mechanics/rarities.md
   # - Soul Traits:
   #     - souls/index.md
   #     - Bravery: souls/bravery.md
@@ -121,8 +108,8 @@ nav:
 
 # Theme Configuration
 theme:
-  custom_dir: overrides
-  favicon: assets/img/deltarune.svg
+  custom_dir: theme
+  favicon: content/img/deltarune.svg
   features:
     - content.tooltips
     - navigation.indexes
@@ -145,4 +132,4 @@ theme:
 # Serve convenience
 watch:
   - includes
-  - overrides
+  - theme

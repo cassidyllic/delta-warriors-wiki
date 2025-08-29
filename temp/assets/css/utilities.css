@@ -1,0 +1,124 @@
+/* Handle utilities rules such as animations and visibility*/
+
+:root {
+  --float-duration: 4s;
+  --float-direction: 1;
+  --float-distance: 2px;
+  --rotation-angle: 0deg;
+}
+
+/* Invisible */
+.invisible {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.invisible.table,
+table.invisible {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.invisible td,
+.invisible th,
+td.invisible,
+th.invisible {
+  background: transparent !important;
+  border: none !important;
+  padding: 8px 12px !important;
+  text-align: left !important;
+  vertical-align: top !important;
+}
+
+.invisible.button,
+button.invisible,
+.invisible input,
+input.invisible {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.invisible.card,
+.invisible.panel,
+div.invisible {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.invisible.list,
+ul.invisible,
+ol.invisible {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.invisible li,
+li.invisible {
+  background: transparent !important;
+  border: none !important;
+  list-style: none !important;
+}
+
+/* Attributes */
+.upside-down {
+  display: inline-block;
+  transform: rotate(180deg);
+  --rotation-angle: 180deg;
+  --float-direction: -1;
+}
+
+.round-glow {
+  width: 120%;
+  height: auto;
+  border-radius: 50%;
+  background: transparent; /* Changed from currentColor to transparent */
+  box-shadow: 0 0 20px currentColor, 0 0 40px currentColor,
+    0 0 80px currentColor;
+}
+
+.big {
+  font-size: 2em;
+}
+
+.big.keys {
+  font-size: 1.4em;
+}
+
+/* Float animation */
+.float {
+  animation: float var(--float-duration) ease-in-out infinite;
+}
+
+.float.slow {
+  --float-duration: 6s;
+}
+
+.float.fast {
+  --float-duration: 2s;
+}
+
+.float.subtle {
+  --float-distance: 1px;
+}
+
+.float.pronounced {
+  --float-distance: 4px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: rotate(var(--rotation-angle))
+      translateY(calc(var(--float-direction) * var(--float-distance)));
+  }
+  50% {
+    transform: rotate(var(--rotation-angle))
+      translateY(calc(var(--float-direction) * -1 * var(--float-distance)));
+  }
+}

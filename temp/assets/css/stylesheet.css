@@ -1,0 +1,142 @@
+/* Handle edits to the MKDocs-Material theme and general style rules. */
+
+:root {
+  --stat-endurance-color: seagreen;
+  --stat-strength-color: crimson;
+  --stat-technique-color: royalblue;
+
+  --soul-bravery-color: #f9a709;
+  --soul-duality-color: #ff0000;
+  --soul-fervour-color: #ec5580;
+  --soul-integrity-color: #003eff;
+  --soul-justice-color: #ffff00;
+  --soul-kindness-color: #00c700;
+  --soul-mischief-color: #777cd7;
+  --soul-patience-color: #42e2ff;
+  --soul-perseverance-color: #992099;
+  --soul-reverence-color: #1abc9c;
+
+  --type-dark-color: #585665;
+  --type-electric-color: #eed559;
+  --type-fire-color: #f1a662;
+  --type-ice-color: #8dccc0;
+  --type-rude-color: #bc4a6a;
+  --type-wind-color: #99a8d9;
+}
+
+/* Theme Colours */
+[data-md-color-scheme="slate"] {
+  --md-hue: 250;
+}
+
+:root * > {
+  --md-primary-fg-color: #1976d2;
+  --md-primary-fg-color--light: #42a5f5;
+  --md-primary-fg-color--dark: #1565c0;
+  --md-accent-fg-color: #1976d2;
+  --md-accent-fg-color--transparent: rgba(25, 118, 210, 0.1);
+  --md-typeset-a-color: #1565c0;
+}
+
+/* Override elements */
+.md-logo {
+  display: none !important;
+}
+
+blockquote {
+  border-left: 2px solid var(--md-primary-fg-color) !important;
+}
+
+.infobox figcaption {
+  margin-bottom: 0;
+}
+
+.md-typeset table th {
+  text-align: center !important;
+}
+
+td,
+th {
+  vertical-align: middle !important;
+}
+
+/* Convenient classes */
+.endurance {
+  color: var(--stat-endurance-color);
+}
+
+.strength {
+  color: var(--stat-strength-color);
+}
+
+.technique {
+  color: var(--stat-technique-color);
+}
+
+.bravery {
+  color: var(--soul-bravery-color);
+}
+
+.duality {
+  color: var(--soul-duality-color);
+}
+
+.fervour {
+  color: var(--soul-fervour-color);
+}
+
+.integrity {
+  color: var(--soul-integrity-color);
+}
+
+.justice {
+  color: var(--soul-justice-color);
+}
+
+.kindness {
+  color: var(--soul-kindness-color);
+}
+
+.mischief {
+  color: var(--soul-mischief-color);
+}
+
+.patience {
+  color: var(--soul-patience-color);
+}
+
+.perseverance {
+  color: var(--soul-perseverance-color);
+}
+
+.reverence {
+  color: var(--soul-reverence-color);
+}
+
+.dark {
+  color: var(--type-dark-color);
+}
+
+.electric {
+  color: var(--type-electric-color);
+}
+
+.fire {
+  color: var(--type-fire-color);
+}
+
+.ice {
+  color: var(--type-ice-color);
+}
+
+.rude {
+  color: var(--type-rude-color);
+}
+
+.star {
+  color: #fff;
+}
+
+.wind {
+  color: var(--type-wind-color);
+}
